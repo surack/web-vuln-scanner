@@ -1,0 +1,28 @@
+{
+  "target": "http://testphp.vulnweb.com/",
+  "timestamp": 1757785082.5229192,
+  "form_count": 1,
+  "findings": [
+    {
+      "type": "xss",
+      "url": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "\"'><script>/*x*/</script>",
+      "evidence": "\"'><script>/*x*/</script>"
+    },
+    {
+      "type": "xss",
+      "url": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "<svg/onload=console.log('x')>",
+      "evidence": "<svg/onload=console.log('x')>"
+    },
+    {
+      "type": "sqli",
+      "url": "http://testphp.vulnweb.com/search.php?test=query",
+      "param": "searchFor",
+      "payload": "'; -- ",
+      "evidence": "you have an error in your sql syntax"
+    }
+  ]
+}
