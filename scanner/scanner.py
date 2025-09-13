@@ -1,9 +1,10 @@
 # scanner/scanner.py
 import time
 import json
-from .crawler import get_forms, SESSION
-from .payloads import XSS_PAYLOADS, SQLI_TESTS
-from .detectors import detect_xss, detect_sqli
+from scanner.crawler import get_forms, SESSION
+from scanner.payloads import XSS_PAYLOADS, SQLI_TESTS
+from scanner.detectors import detect_xss, detect_sqli
+
 
 def scan_url(url, delay=0.5):
     """
