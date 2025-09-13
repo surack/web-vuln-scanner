@@ -1,4 +1,4 @@
-# Web Vulnerability Scanner (lab-only)
+# Web Vulnerability Scanner
 
 Simple Python-based scanner that:
 - crawls page forms
