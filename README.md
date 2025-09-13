@@ -19,3 +19,32 @@ It demonstrates how to crawl web forms, inject test payloads, and detect common 
 ---
 
 ## 📂 Project Structure
+
+web-vuln-scanner/
+├─ scanner/ # Core scanner code
+│ ├─ crawler.py # Form discovery
+│ ├─ payloads.py # Test payloads
+│ ├─ detectors.py # Detection heuristics
+│ ├─ scanner.py # Scan orchestration
+│ └─ cli.py # CLI entry point
+├─ webui/ # (Optional) Flask UI
+├─ tests/ # Simple unit tests
+├─ .github/workflows/ # GitHub Actions workflows
+├─ requirements.txt
+├─ SAFE_USAGE.md
+└─ README.md
+
+
+
+---
+
+## 🚀 How to Run (GitHub Actions)
+1. Go to the **Actions** tab of this repository.  
+2. Select **Manual Scan** workflow.  
+3. Click **Run workflow** and enter a target URL (e.g., `http://testphp.vulnweb.com/`).  
+4. Wait for the workflow to finish.  
+5. Download the `scan-results` artifact to view the JSON report.
+
+---
+
+
