@@ -2,6 +2,8 @@
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from scanner.scanner import scan_url
+
 
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "web-vuln-scanner/1.0 (lab-only)"})
