@@ -1,0 +1,11 @@
+<!-- webui/templates/results.html -->
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Scan Results</title></head>
+  <body>
+    <h1>Scan Results for {{ report.target }}</h1>
+    <p>Found {{ report.form_count }} forms. Findings: {{ report.findings|length }}</p>
+    <pre>{{ report | tojson(indent=2) }}</pre>
+    <p><a href="/">Back</a></p>
+  </body>
+</html>
