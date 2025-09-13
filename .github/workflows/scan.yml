@@ -24,7 +24,7 @@ jobs:
         run: python -m pip install --upgrade pip && pip install -r requirements.txt
 
             - name: Run scanner
-        run: python -m scanner.cli --target "${{ github.event.inputs.target }}"
+              run: python -m scanner.cli --target "${{ github.event.inputs.target }}"
 
 
       - name: Upload scan results
